@@ -154,7 +154,7 @@ function append(code, file) {
     return writeFile(code, `public/${filename}`);
   } else if (program.mode === "build") {
     const filename = path.basename(file);
-    return writeFile(code, `${program.buildPath}/${filename}`);
+    return writeFile(code, `public/${filename}`);
   } else if (program.mode === "replace") {
     const filename = path.basename(file);
     return writeFile(code, BUILD_SW_FILE_PATH);
